@@ -1,3 +1,4 @@
+const historialRoutes = require("./routes/historialRoutes");
 const express = require("express");
 const cors = require("cors");
 
@@ -16,6 +17,7 @@ app.get("/", (req, res) => {
 
 // RUTAS
 app.use("/api/estudiantes", estudiantesRoutes);
+app.use("/api/historial", historialRoutes);
 
 const PORT = 3000;
 
