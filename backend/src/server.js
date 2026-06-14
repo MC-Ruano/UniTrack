@@ -1,3 +1,4 @@
+const catedraticosRoutes = require("./routes/catedraticosRoutes");
 const avlRoutes = require("./routes/avlRoutes");
 const cursosRoutes = require("./routes/cursosRoutes");
 const historialRoutes = require("./routes/historialRoutes");
@@ -22,6 +23,7 @@ app.use("/api/estudiantes", estudiantesRoutes);
 app.use("/api/historial", historialRoutes);
 app.use("/api/cursos", cursosRoutes);
 app.use("/api/avl", avlRoutes);
+app.use("/api/catedraticos", catedraticosRoutes);
 
 const PORT = 3000;
 
