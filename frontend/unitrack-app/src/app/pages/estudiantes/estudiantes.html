@@ -1,1 +1,81 @@
-<p>estudiantes works!</p>
+<h2>Gestión de Estudiantes</h2>
+
+<form>
+
+<input
+    type="text"
+    placeholder="Carnet"
+    [(ngModel)]="nuevo.carnet"
+    name="carnet">
+
+<br><br>
+
+<input
+    type="text"
+    placeholder="Nombre"
+    [(ngModel)]="nuevo.nombre"
+    name="nombre">
+
+<br><br>
+
+<input
+    type="text"
+    placeholder="Apellido"
+    [(ngModel)]="nuevo.apellido"
+    name="apellido">
+
+<br><br>
+
+<input
+    type="email"
+    placeholder="Correo"
+    [(ngModel)]="nuevo.correo"
+    name="correo">
+
+<br><br>
+
+<input
+    type="date"
+    [(ngModel)]="nuevo.fechaNacimiento"
+    name="fechaNacimiento">
+
+<br><br>
+
+<input
+    type="text"
+    placeholder="Carrera"
+    [(ngModel)]="nuevo.carrera"
+    name="carrera">
+
+<br><br>
+
+<input
+    type="number"
+    placeholder="Semestre"
+    [(ngModel)]="nuevo.semestreActual"
+    name="semestreActual">
+
+    <br>
+
+<button (click)="agregarEstudiante()">
+    Agregar Estudiante
+</button>
+
+</form>
+
+<hr>
+
+<h3>Lista de Estudiantes</h3>
+
+<ul>
+
+  <li *ngFor="let estudiante of estudiantes">
+
+    {{ estudiante.carnet }}
+    -
+    {{ estudiante.nombre }}
+    {{ estudiante.apellido }}
+
+    </li>
+
+</ul>
