@@ -259,6 +259,135 @@ alturaArbol() {
 
 }
 
+eliminar(codigo) {
+
+    this.root = this.eliminarNodo(
+        this.root,
+        codigo
+    );
+
+}
+
+eliminarNodo(nodo, codigo) {
+
+    if (!nodo) {
+        return nodo;
+    }
+
+    if (codigo < nodo.curso.codigo) {
+
+        nodo.left = this.eliminarNodo(
+            nodo.left,
+            codigo
+        );
+
+    }
+
+    else if (codigo > nodo.curso.codigo) {
+
+        nodo.right = this.eliminarNodo(
+            nodo.right,
+            codigo
+        );
+
+    }
+
+    else {
+
+        // Sin hijos o un hijo
+
+        if (!nodo.left) {
+            return nodo.right;
+        }
+
+        if (!nodo.right) {
+            return nodo.left;
+        }
+
+        // Dos hijos
+
+        let sucesor = nodo.right;
+
+        while (sucesor.left) {
+            sucesor = sucesor.left;
+        }
+
+        nodo.curso = sucesor.curso;
+
+        nodo.right = this.eliminarNodo(
+            nodo.right,
+            sucesor.curso.codigo
+        );
+
+    }
+
+    nodo.altura =
+        1 + Math.max(
+            this.altura(nodo.left),
+            this.altura(nodo.right)
+        );
+
+    const balance =
+        this.obtenerBalance(nodo);
+
+    // LL
+
+    if (
+        balance > 1 &&
+        this.obtenerBalance(nodo.left) >= 0
+    ) {
+
+        return this.rotarDerecha(nodo);
+
+    }
+
+    // LR
+
+    if (
+        balance > 1 &&
+        this.obtenerBalance(nodo.left) < 0
+    ) {
+
+        nodo.left =
+            this.rotarIzquierda(
+                nodo.left
+            );
+
+        return this.rotarDerecha(nodo);
+
+    }
+
+    // RR
+
+    if (
+        balance < -1 &&
+        this.obtenerBalance(nodo.right) <= 0
+    ) {
+
+        return this.rotarIzquierda(nodo);
+
+    }
+
+    // RL
+
+    if (
+        balance < -1 &&
+        this.obtenerBalance(nodo.right) > 0
+    ) {
+
+        nodo.right =
+            this.rotarDerecha(
+                nodo.right
+            );
+
+        return this.rotarIzquierda(nodo);
+
+    }
+
+    return nodo;
+
+}
+
 }
 
 module.exports = CursosAVL;

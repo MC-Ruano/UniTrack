@@ -79,4 +79,16 @@ router.get("/:codigo", (req, res) => {
 
 });
 
+router.delete("/:codigo", (req, res) => {
+
+    avl.eliminar(
+        req.params.codigo
+    );
+
+    res.json({
+        mensaje: "Curso eliminado del AVL"
+    });
+
+});
+
 module.exports = router;
