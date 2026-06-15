@@ -1,1 +1,83 @@
-<p>historial works!</p>
+<h2>Historial Académico</h2>
+
+<form>
+
+<input
+    type="text"
+    placeholder="Código Curso"
+    [(ngModel)]="nueva.codigoCurso"
+    name="codigoCurso">
+
+<br><br>
+
+<input
+    type="text"
+    placeholder="Nombre Curso"
+    [(ngModel)]="nueva.nombreCurso"
+    name="nombreCurso">
+
+<br><br>
+
+<input
+    type="text"
+    placeholder="Semestre"
+    [(ngModel)]="nueva.semestre"
+    name="semestre">
+
+<br><br>
+
+<input
+    type="number"
+    placeholder="Nota"
+    [(ngModel)]="nueva.nota"
+    name="nota">
+
+<br><br>
+
+<button
+    type="button"
+    (click)="agregarInscripcion()">
+
+    Agregar Inscripción
+
+</button>
+
+</form>
+
+<hr>
+
+<button
+    type="button"
+    (click)="cargarHistorial()">
+
+    Mostrar Normal
+
+</button>
+
+<button
+    type="button"
+    (click)="cargarInverso()">
+
+    Mostrar Inverso
+
+</button>
+
+<hr>
+
+<h3>Historial</h3>
+
+<ul>
+
+<li *ngFor="let item of historial">
+
+    {{ item.codigoCurso }}
+    -
+    {{ item.nombreCurso }}
+    -
+    {{ item.semestre }}
+    -
+    Nota: {{ item.nota }}
+
+</li>
+
+</ul>

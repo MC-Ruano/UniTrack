@@ -1,1 +1,77 @@
-<p>catedraticos works!</p>
+<h2>Directorio de Catedráticos (Hash)</h2>
+
+<form>
+
+<input
+    type="text"
+    placeholder="Código"
+    [(ngModel)]="nuevo.codigo"
+    name="codigo">
+
+<br><br>
+
+<input
+    type="text"
+    placeholder="Nombre"
+    [(ngModel)]="nuevo.nombre"
+    name="nombre">
+
+<br><br>
+
+<input
+    type="text"
+    placeholder="Apellido"
+    [(ngModel)]="nuevo.apellido"
+    name="apellido">
+
+<br><br>
+
+<input
+    type="text"
+    placeholder="Especialidad"
+    [(ngModel)]="nuevo.especialidad"
+    name="especialidad">
+
+<br><br>
+
+<input
+    type="email"
+    placeholder="Correo"
+    [(ngModel)]="nuevo.correo"
+    name="correo">
+
+<br><br>
+
+<button
+    type="button"
+    (click)="agregarCatedratico()">
+
+    Agregar Catedrático
+
+</button>
+
+</form>
+
+<hr>
+
+<h3>Factor de Carga</h3>
+
+<p>
+
+{{ factorCarga }}
+
+</p>
+
+<hr>
+
+<h3>Tabla Hash</h3>
+
+<ul>
+
+<li *ngFor="let bucket of tabla">
+
+    {{ bucket | json }}
+
+</li>
+
+</ul>

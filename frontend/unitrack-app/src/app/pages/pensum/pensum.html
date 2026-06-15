@@ -1,1 +1,97 @@
-<p>pensum works!</p>
+<h2>Pensum Académico (Grafo)</h2>
+
+<h3>Agregar Curso</h3>
+
+<input
+  type="text"
+  placeholder="Código"
+  [(ngModel)]="nuevoCurso.codigo">
+
+<button
+  type="button"
+  (click)="agregarCurso()">
+
+  Agregar Curso
+
+</button>
+
+<hr>
+
+<h3>Agregar Prerrequisito</h3>
+
+<input
+  type="text"
+  placeholder="Origen"
+  [(ngModel)]="nuevoPrerequisito.origen">
+
+<input
+  type="text"
+  placeholder="Destino"
+  [(ngModel)]="nuevoPrerequisito.destino">
+
+<button
+  type="button"
+  (click)="agregarPrerequisito()">
+
+  Agregar Prerrequisito
+
+</button>
+
+<hr>
+
+<h3>Recorridos</h3>
+
+<input
+  type="text"
+  placeholder="Curso Inicial"
+  [(ngModel)]="inicioRecorrido">
+
+<button
+  type="button"
+  (click)="bfs()">
+
+  BFS
+
+</button>
+
+<button
+  type="button"
+  (click)="dfs()">
+
+  DFS
+
+</button>
+
+<button
+  type="button"
+  (click)="topologico()">
+
+  Topológico
+
+</button>
+
+<hr>
+
+<h3>Resultado</h3>
+
+<p>
+
+{{ resultado.join(' → ') }}
+
+</p>
+
+<hr>
+
+<h3>Detección de Ciclos</h3>
+
+<p>
+
+{{ tieneCiclos }}
+
+</p>
+
+<hr>
+
+<h3>Grafo Actual</h3>
+
+<pre>{{ grafo | json }}</pre>

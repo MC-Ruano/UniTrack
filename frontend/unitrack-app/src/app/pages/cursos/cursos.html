@@ -1,1 +1,105 @@
-<p>cursos works!</p>
+<h2>Gestión de Cursos (BST)</h2>
+
+<form>
+
+<input
+    type="text"
+    placeholder="Código"
+    [(ngModel)]="nuevo.codigo"
+    name="codigo">
+
+<br><br>
+
+<input
+    type="text"
+    placeholder="Nombre"
+    [(ngModel)]="nuevo.nombre"
+    name="nombre">
+
+<br><br>
+
+<input
+    type="number"
+    placeholder="Créditos"
+    [(ngModel)]="nuevo.creditos"
+    name="creditos">
+
+<br><br>
+
+<input
+    type="text"
+    placeholder="Catedrático"
+    [(ngModel)]="nuevo.catedratico"
+    name="catedratico">
+
+<br><br>
+
+<input
+    type="text"
+    placeholder="Horario"
+    [(ngModel)]="nuevo.horario"
+    name="horario">
+
+<br><br>
+
+<input
+    type="number"
+    placeholder="Cupo Máximo"
+    [(ngModel)]="nuevo.cupoMaximo"
+    name="cupoMaximo">
+
+<br><br>
+
+<button
+    type="button"
+    (click)="agregarCurso()">
+
+    Agregar Curso
+
+</button>
+
+</form>
+
+<hr>
+
+<button
+    type="button"
+    (click)="cargarInOrden()">
+
+    InOrden
+
+</button>
+
+<button
+    type="button"
+    (click)="cargarPreOrden()">
+
+    PreOrden
+
+</button>
+
+<button
+    type="button"
+    (click)="cargarPostOrden()">
+
+    PostOrden
+
+</button>
+
+<hr>
+
+<h3>Listado de Cursos</h3>
+
+<ul>
+
+<li *ngFor="let curso of cursos">
+
+    {{ curso.codigo }}
+    -
+    {{ curso.nombre }}
+    -
+    Créditos: {{ curso.creditos }}
+
+</li>
+
+</ul>
