@@ -1,0 +1,73 @@
+/* ===== HEADER ===== */
+
+header {
+
+    background: linear-gradient(
+        135deg,
+        #0f172a,
+        #1e3a8a
+    );
+
+    color: white;
+
+    padding: 25px 40px;
+
+    box-shadow:
+        0 4px 15px rgba(0,0,0,.15);
+
+}
+
+header h1 {
+
+    margin: 0;
+
+    font-size: 40px;
+
+    font-weight: bold;
+
+}
+
+/* ===== NAVBAR ===== */
+
+nav {
+
+    background: white;
+
+    padding: 15px 40px;
+
+    box-shadow:
+        0 2px 10px rgba(0,0,0,.08);
+
+}
+
+nav a {
+
+    text-decoration: none;
+
+    color: #1e3a8a;
+
+    font-weight: 600;
+
+    margin-right: 25px;
+
+    transition: .3s;
+
+}
+
+nav a:hover {
+
+    color: #2563eb;
+
+}
+
+/* ===== CONTENEDOR ===== */
+
+.container {
+
+    max-width: 1200px;
+
+    margin: auto;
+
+    padding: 30px;
+
+}

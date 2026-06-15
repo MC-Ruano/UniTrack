@@ -1,14 +1,37 @@
-<h1>UniTrack</h1>
+<header>
+
+  <h1>UniTrack</h1>
+
+</header>
 
 <nav>
-  <a routerLink="/">Dashboard</a> |
-  <a routerLink="/estudiantes">Estudiantes</a> |
-  <a routerLink="/historial">Historial</a> |
-  <a routerLink="/cursos">Cursos</a> |
-  <a routerLink="/catedraticos">Catedráticos</a> |
-  <a routerLink="/pensum">Pensum</a>
+
+  <a routerLink="/">Dashboard</a>
+
+  <a routerLink="/estudiantes">
+    Estudiantes
+  </a>
+
+  <a routerLink="/historial">
+    Historial
+  </a>
+
+  <a routerLink="/cursos">
+    Cursos
+  </a>
+
+  <a routerLink="/catedraticos">
+    Catedráticos
+  </a>
+
+  <a routerLink="/pensum">
+    Pensum
+  </a>
+
 </nav>
 
-<hr>
+<div class="container">
 
-<router-outlet></router-outlet>
+  <router-outlet></router-outlet>
+
+</div>

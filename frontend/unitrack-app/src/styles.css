@@ -1,1 +1,77 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+
+    margin: 0;
+
+    font-family:
+        "Segoe UI",
+        Tahoma,
+        Geneva,
+        Verdana,
+        sans-serif;
+
+    background: #f4f7fb;
+
+}
+
+h2 {
+
+    color: #1e3a8a;
+
+}
+
+h3 {
+
+    color: #334155;
+
+}
+
+input {
+
+    padding: 10px;
+
+    border: 1px solid #d1d5db;
+
+    border-radius: 8px;
+
+    margin: 5px;
+
+}
+
+button {
+
+    background: #2563eb;
+
+    color: white;
+
+    border: none;
+
+    border-radius: 8px;
+
+    padding: 10px 16px;
+
+    cursor: pointer;
+
+    margin: 5px;
+
+}
+
+button:hover {
+
+    background: #1d4ed8;
+
+}
+
+.card {
+
+    background: white;
+
+    padding: 25px;
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 4px 15px rgba(0,0,0,.08);
+
+    margin-bottom: 20px;
+
+}
