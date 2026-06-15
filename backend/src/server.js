@@ -1,3 +1,4 @@
+const pensumRoutes = require("./routes/pensumRoutes");
 const catedraticosRoutes = require("./routes/catedraticosRoutes");
 const avlRoutes = require("./routes/avlRoutes");
 const cursosRoutes = require("./routes/cursosRoutes");
@@ -24,6 +25,7 @@ app.use("/api/historial", historialRoutes);
 app.use("/api/cursos", cursosRoutes);
 app.use("/api/avl", avlRoutes);
 app.use("/api/catedraticos", catedraticosRoutes);
+app.use("/api/pensum", pensumRoutes);
 
 const PORT = 3000;
 
